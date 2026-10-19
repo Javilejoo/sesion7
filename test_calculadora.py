@@ -147,3 +147,10 @@ def test_lcm_ambos_cero_lanza_error():
 def test_lcm_con_string_lanza_error():
     with pytest.raises(TypeError):
         lcm("4", 6)
+
+
+def test_lcm_ceros_decimales_lanza_error_de_tipo():
+    # Valida el tipo antes que el valor: 0.0 es float, así que debe ser
+    # TypeError y no el ValueError del caso (0, 0).
+    with pytest.raises(TypeError):
+        lcm(0.0, 0)
