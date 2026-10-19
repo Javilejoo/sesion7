@@ -16,6 +16,10 @@ def test_square_cero():
     assert square(0) == 0
 
 
+def test_square_decimal():
+    assert square(2.5) == 6.25
+
+
 # ---------- factorial ----------
 def test_factorial_de_5():
     assert factorial(5) == 120
@@ -86,6 +90,11 @@ def test_square_con_none_lanza_error():
         square(None)
 
 
+def test_square_con_bool_lanza_error():
+    with pytest.raises(TypeError):
+        square(True)
+
+
 # ---------- factorial ----------
 def test_factorial_negativo_lanza_error():
     with pytest.raises(ValueError):
@@ -100,6 +109,11 @@ def test_factorial_decimal_lanza_error():
 def test_factorial_con_string_lanza_error():
     with pytest.raises(TypeError):
         factorial("5")
+
+
+def test_factorial_con_bool_lanza_error():
+    with pytest.raises(TypeError):
+        factorial(True)
 
 
 # ---------- is_prime ----------
