@@ -13,7 +13,7 @@ def _validar_entero(n):
 def square(n):
     """Retorna el cuadrado de un número."""
     _validar_numero(n)
-    return n * n
+    return n + n
 
 
 def factorial(n):
